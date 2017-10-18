@@ -8,14 +8,14 @@ package shapes;
 public class Circle implements Shape{
 	
     //fields
-    private int radius;
+    private double radius;
     private static double pi = 3.14;
 
     /**
      * Constructor method
      * @param radius
      */
-    public Circle(int radius){
+    public Circle(double radius){
        //to be implemented by student
     }
 

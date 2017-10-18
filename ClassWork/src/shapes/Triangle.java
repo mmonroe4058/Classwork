@@ -1,12 +1,12 @@
 package shapes;
 
-public class Triangle {
+public Triangle implements Shape{
 
-	private int side1;
-	private int side2;
-	private int side3;
+	private double side1;
+	private double side2;
+	private double side3;
 	
-	public Triangle() {
+	public class Triangle(int side1, ){
 		
 	}
 
