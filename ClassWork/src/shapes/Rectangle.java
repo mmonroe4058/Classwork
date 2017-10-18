@@ -4,31 +4,30 @@ package shapes;
  * @author Mr Levin Created 10/16/2017 Lab 2.1 shapes
  *
  */
-public class Rectangle implements Shape {
+public class Rectangle implements Shape{
+	
+    private int length;
+    private int width;
 
-	private int length;
-	private int width;
-
-	public Rectangle(int length, int width) {
-		this.length = length;
-		this.width = width;
-	}
-
-
-	public double calculateArea() {
-		// To be written by student
-		return 0.0;
-	}
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
 
 
-	public double calculatePerimeter() {
-		// To be written by student
-		return 0.0;
-	}
+    @Override
+    public double calculateArea() {
+       return(length * width);
+    }
 
+    @Override
+    public double calculatePerimeter() {
+        return(2*length + 2*width);
+    }
 
-	public String toString() {
-		return "Rectangle Width: " + width + " Length: " + length + " Area: " + this.calculateArea() + " Perimeter: "
-				+ this.calculatePerimeter();
-	}
+    @Override
+    public String toString()
+    {
+        return "Rectangle Width: " + width + " Length: " + length + " Area: " + this.calculateArea() + " Perimeter: " + this.calculatePerimeter();
+    }
 }
