@@ -3,10 +3,10 @@ package shapes;
 
 public class Triangle implements Shape{
 
-	private double side1;
-	private double side2;
-	private double base;
-	private double height;
+	double side1;
+	double side2;
+	double base;
+	double height;
 	
 	public Triangle(double side1, double side2, double base, double height)
 	{
@@ -14,6 +14,11 @@ public class Triangle implements Shape{
 		this.side2 = side2;
 		this.base = base;
 		this.height = height;
+	}
+	
+	
+	public double calculateHeight() {
+		return 2*(calculateArea()/base);
 	}
 	
 	@Override
@@ -29,7 +34,7 @@ public class Triangle implements Shape{
 	@Override
     public String toString()
     {
-    	return "Triangle Side1: " + side1 + "Side2: " + side2 + " Area: " + this.calculateArea() + " Perimeter: " + this.calculatePerimeter();
+    	return "Triangle Side1: " + side1 + " Side2: " + side2 + " Base: " + base + " Height: " + height + " Area: " + this.calculateArea() + " Perimeter: " + this.calculatePerimeter();
     }
 	
 }
