@@ -14,8 +14,8 @@ public class ReferenceAndValue {
 		
 		System.out.println(foo);
 		System.out.println(foofoo);
-		System.out.println(shopList);
-		System.out.println(newShopList);
+		printArray(shopList);
+		printArray(newShopList);
 		
 	}
 	
@@ -31,6 +31,7 @@ public class ReferenceAndValue {
 		return str1;
 	}
 	
+	/*
 	public static String[] doubled(String[] arr1)
 	{
 		for(int i = 0; i < arr1.length; i++)
@@ -40,13 +41,38 @@ public class ReferenceAndValue {
 		
 		return arr1;
 	}
+	*/
 	
-	public static String[] printArray(String[] arr1)
+	public static String[] doubled(String[] arr1)
+	{
+		String[] test = new String[arr1.length];
+		
+		for(int i = 0; i < test.length; i++)
+		{
+			test[i] = arr1[i] + arr1[i];
+		}
+		
+		return test;
+	}
+	
+	
+	private static void printArray(Object[] arr1)
+	{
+		for(Object x : arr1)
+		{
+			System.out.println(x);
+		}
+	}
+	
+	/*
+
+	private static void printArray(Object[] arr1)
 	{
 		for(int i = 0; i < arr1.length; i++)
 		{
 			System.out.println(arr1[i]);
 		}
 	}
+	 */
 
 }
